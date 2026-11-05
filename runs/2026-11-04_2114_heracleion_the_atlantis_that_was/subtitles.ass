@@ -1,0 +1,41 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: KineticReel,Arial,62,&H002BF5FF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,5,2,2,80,80,360,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.20,0:00:01.32,KineticReel,,0,0,0,,FOR OVER A THOUSAND
+Dialogue: 0,0:00:01.32,0:00:02.44,KineticReel,,0,0,0,,YEARS, HISTORIANS THOUGHT THIS
+Dialogue: 0,0:00:02.44,0:00:03.56,KineticReel,,0,0,0,,CITY WAS MERELY A
+Dialogue: 0,0:00:03.56,0:00:04.68,KineticReel,,0,0,0,,MYTH INVENTED BY THE
+Dialogue: 0,0:00:04.68,0:00:05.80,KineticReel,,0,0,0,,GREEKS.
+Dialogue: 0,0:00:06.00,0:00:07.22,KineticReel,,0,0,0,,BEFORE ALEXANDRIA EXISTED, HERACLEION
+Dialogue: 0,0:00:07.22,0:00:08.44,KineticReel,,0,0,0,,WAS EGYPT'S UNDISPUTED GATEWAY
+Dialogue: 0,0:00:08.44,0:00:09.66,KineticReel,,0,0,0,,TO THE MEDITERRANEAN AND
+Dialogue: 0,0:00:09.66,0:00:10.88,KineticReel,,0,0,0,,THE TRADE CAPITAL OF
+Dialogue: 0,0:00:10.88,0:00:12.10,KineticReel,,0,0,0,,THE ANCIENT WORLD.
+Dialogue: 0,0:00:12.30,0:00:13.52,KineticReel,,0,0,0,,UNTIL THE EIGHTH CENTURY,
+Dialogue: 0,0:00:13.52,0:00:14.74,KineticReel,,0,0,0,,WHEN CATASTROPHIC SOIL LIQUEFACTION
+Dialogue: 0,0:00:14.74,0:00:15.96,KineticReel,,0,0,0,,AND TIDAL WAVES DRAGGED
+Dialogue: 0,0:00:15.96,0:00:17.18,KineticReel,,0,0,0,,THE ENTIRE METROPOLIS BENEATH
+Dialogue: 0,0:00:17.18,0:00:18.40,KineticReel,,0,0,0,,THE SEA IN HOURS.
+Dialogue: 0,0:00:18.60,0:00:19.92,KineticReel,,0,0,0,,SWALLOWED THIRTY FEET DEEP
+Dialogue: 0,0:00:19.92,0:00:21.24,KineticReel,,0,0,0,,AND LOST UNDER THICK
+Dialogue: 0,0:00:21.24,0:00:22.56,KineticReel,,0,0,0,,MUD, IT VANISHED FROM
+Dialogue: 0,0:00:22.56,0:00:23.88,KineticReel,,0,0,0,,HUMAN MEMORY FOR TWELVE
+Dialogue: 0,0:00:23.88,0:00:25.20,KineticReel,,0,0,0,,STRAIGHT CENTURIES.
+Dialogue: 0,0:00:25.40,0:00:26.52,KineticReel,,0,0,0,,UNTIL THE YEAR TWO
+Dialogue: 0,0:00:26.52,0:00:27.64,KineticReel,,0,0,0,,THOUSAND, WHEN MARINE EXPLORERS
+Dialogue: 0,0:00:27.64,0:00:28.76,KineticReel,,0,0,0,,LOCATED SIXTY-FOUR SHIPS, GOLD
+Dialogue: 0,0:00:28.76,0:00:29.88,KineticReel,,0,0,0,,TREASURES, AND TOWERING FIVE-METER
+Dialogue: 0,0:00:29.88,0:00:31.00,KineticReel,,0,0,0,,GOD STATUES.
+Dialogue: 0,0:00:31.20,0:00:32.60,KineticReel,,0,0,0,,ATLANTIS MIGHT BE LEGEND,
+Dialogue: 0,0:00:32.60,0:00:34.00,KineticReel,,0,0,0,,BUT THE SUNKEN CITY
+Dialogue: 0,0:00:34.00,0:00:35.40,KineticReel,,0,0,0,,OF HERACLEION WAS TERRIFYINGLY
+Dialogue: 0,0:00:35.40,0:00:36.80,KineticReel,,0,0,0,,REAL.

@@ -142,6 +142,12 @@ def cmd_prep(args):
     drive.upload_file(folder_id, prompts_md, run_dir)
     drive.upload_file(folder_id, storyboard_md, run_dir)
 
+    # Persist cloud folder metadata in plan.json for zero-guesswork reply intake
+    storyboard["gdrive_folder_id"] = folder_id
+    storyboard["gdrive_folder_url"] = gdrive_link
+    with open(plan_path, "w", encoding="utf-8") as f:
+        json.dump(storyboard, f, indent=2)
+
     supabase = SupabaseManager()
     supabase_prompts_url = None
     if supabase.is_configured():
@@ -201,7 +207,19 @@ def cmd_compile(args):
     drive = DriveManager()
     supabase = SupabaseManager()
     print("\n[1/4] Synchronizing scene video clips from cloud storage...")
-    clips = drive.download_scene_clips(cloud_link or target_run.name, target_run)
+
+    # Resolve exact Google Drive folder: passed link -> plan.json saved folder ID -> folder name lookup
+    plan_path = target_run / "plan.json"
+    saved_folder_id = None
+    if plan_path.exists():
+        try:
+            with open(plan_path, "r", encoding="utf-8") as pf:
+                saved_folder_id = json.load(pf).get("gdrive_folder_id")
+        except Exception:
+            pass
+
+    folder_target = cloud_link or saved_folder_id or target_run.name
+    clips = drive.download_scene_clips(folder_target, target_run)
     if supabase.is_configured():
         supabase_clips = supabase.download_scene_clips(target_run.name, target_run / "videos")
         for sc in supabase_clips:

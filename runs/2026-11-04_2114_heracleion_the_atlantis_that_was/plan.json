@@ -1,0 +1,54 @@
+{
+  "title": "Heracleion: The Atlantis That Was Real",
+  "topic": "The rediscovery of the submerged ancient Egyptian port city of Thonis-Heracleion",
+  "gdrive_folder_id": "1g5BE5IYqhPHjBKLToY_YlW_XG0WN0ZEe",
+  "gdrive_folder_url": "https://drive.google.com/drive/folders/1g5BE5IYqhPHjBKLToY_YlW_XG0WN0ZEe",
+  "hook": "For over a thousand years, historians thought this city was merely a myth invented by the Greeks.",
+  "estimated_duration_secs": 38,
+  "caption": "For twelve centuries, scholars dismissed the legendary port of Heracleion as a myth. Then in the year 2000, underwater archaeologists uncovered titanic statues, temple ruins, and sixty-four sunken ships resting silently on the Mediterranean seabed. What else is hiding beneath the waves?\n\n#ancientegypt #heracleion #lostcivilization #underwaterarchaeology #historymysteries #ancienthistory #sunkenruins",
+  "music_mood": "Deep atmospheric ocean drone, subtle metallic water percussion, swelling into low cinematic brass suspense",
+  "scenes": [
+    {
+      "scene_id": 1,
+      "duration_secs": 6.0,
+      "voiceover_text": "For over a thousand years, historians thought this city was merely a myth invented by the Greeks.",
+      "image_prompt": "9:16 vertical composition, murky turquoise underwater deep-sea atmosphere, the massive eroded stone face of a colossal ancient Egyptian granite colossus submerged on the seabed, silt drifting across weathered hieroglyphics, cinematic god rays piercing through ocean depths, photorealistic 35mm film grain, moody shadows, Hasselblad medium format look.",
+      "video_motion_prompt": "Slow continuous forward push-in toward the stone pharaoh face, gentle undulating oceanic depth, soft suspended particles drifting through volumetric sunbeams, 24fps filmic cadence."
+    },
+    {
+      "scene_id": 2,
+      "duration_secs": 6.5,
+      "voiceover_text": "Before Alexandria existed, Heracleion was Egypt's undisputed gateway to the Mediterranean and the trade capital of the ancient world.",
+      "image_prompt": "9:16 vertical composition, historical cinematic recreation of ancient Thonis-Heracleion at golden hour, monumental limestone Egyptian temples and Greek trading galleys docked in deep harbor canals, bustling merchants, billowing linen canopies, glowing warm Mediterranean sunlight reflecting off water, atmospheric haze, ultra-detailed architectural textures.",
+      "video_motion_prompt": "Smooth aerial crane descent over ancient port canals toward monumental temple pylons, subtle harbor water ripples, warm atmospheric golden haze, cinematic parallax."
+    },
+    {
+      "scene_id": 3,
+      "duration_secs": 6.5,
+      "voiceover_text": "Until the eighth century, when catastrophic soil liquefaction and tidal waves dragged the entire metropolis beneath the sea in hours.",
+      "image_prompt": "9:16 vertical composition, dramatic cinematic catastrophe scene, massive limestone temple columns fracturing and sinking into liquified earth and churning seawater, stormy tempest skies, torrential rain, dramatic lightning flashes illuminating colossal crumbling masonry, photorealistic dynamic chaos, moody dark palette.",
+      "video_motion_prompt": "Low-angle dramatic slow dolly-out as massive stone pillars tilt and fracture into surging foaming waters, volumetric spray, high-tension camera micro-drift."
+    },
+    {
+      "scene_id": 4,
+      "duration_secs": 7.0,
+      "voiceover_text": "Swallowed thirty feet deep and lost under thick mud, it vanished from human memory for twelve straight centuries.",
+      "image_prompt": "9:16 vertical composition, eerie underwater seabed landscape, sixty-four ancient wooden shipwreck skeletons buried half in sediment, scattered amphorae clay jars resting among submerged fractured stone columns, solitary deep-sea research diver with glowing yellow halogen flashlight beam in background, dark cold abyssal aesthetic, photorealistic texture.",
+      "video_motion_prompt": "Slow horizontal tracking shot across ancient submerged amphorae and fractured pillars, the diver's yellow spotlight beam sweeping slowly across the sea floor, drifting marine sediment."
+    },
+    {
+      "scene_id": 5,
+      "duration_secs": 6.0,
+      "voiceover_text": "Until the year two thousand, when marine explorers located sixty-four ships, gold treasures, and towering five-meter god statues.",
+      "image_prompt": "9:16 vertical composition, underwater archaeological excavation, deep oceanic trench, a colossal 5-meter red granite statue of god Hapi standing upright on the ocean floor, dual underwater exploration submersible lights creating crisp dramatic chiaroscuro illumination, detailed stone chisel marks, pristine marine photography.",
+      "video_motion_prompt": "Dramatic upward tilt and pedestal move revealing the full height of the granite god statue from seabed to crown, harsh directional diving lights cutting through particulate water."
+    },
+    {
+      "scene_id": 6,
+      "duration_secs": 6.0,
+      "voiceover_text": "Atlantis might be legend, but the sunken city of Heracleion was terrifyingly real.",
+      "image_prompt": "9:16 vertical composition, wide atmospheric deep-water establishing shot, sunken stone city foundations and ruined avenues stretching across the dark Mediterranean seabed into infinite deep-blue abyss, ethereal beams of sunlight refracting down, haunting beauty, photorealistic 8k detail, cinematic film tone.",
+      "video_motion_prompt": "Slow majestic crane rise pulling upward into the ocean gloom, revealing sprawling submerged ruins receding into blue shadows, subtle bioluminescent particles drifting, seamless fade."
+    }
+  ]
+}

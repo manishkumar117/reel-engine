@@ -40,10 +40,10 @@ env.bak/
 venv.bak/
 
 # ── Local Production Runs & Heavy Media (Persisted to Cloud) ──
-reel_engine/runs/*
-!reel_engine/runs/.gitkeep
 runs/*
 !runs/.gitkeep
+!runs/2026-11-04_2114_heracleion_the_atlantis_that_was/
+!runs/2026-11-04_2114_heracleion_the_atlantis_that_was/**
 
 # ── Media File Extensions ──────────────────────────────────────
 *.mp4
@@ -54,6 +54,8 @@ runs/*
 *.png
 *.jpg
 *.jpeg
+!runs/2026-11-04_2114_heracleion_the_atlantis_that_was/*.wav
+!runs/2026-11-04_2114_heracleion_the_atlantis_that_was/*.ass
 
 # ── Databases & Logs ───────────────────────────────────────────
 *.db
