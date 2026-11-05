@@ -68,11 +68,18 @@ def check_for_replies() -> List[Dict[str, Any]]:
             run_id = run_match.group(1).rstrip("]")
             logger.info(f"[imap_listener] Detected reply for Run ID: '{run_id}' (Subject: '{subject}')")
 
-            # Extract cloud storage URL if provided
+            # 1. Extract cloud storage URL if provided
             url_match = re.search(r"https?://(?:drive\.google\.com|www\.dropbox\.com|[^\s]+)", body)
             cloud_link = url_match.group(0).rstrip(".,>") if url_match else None
 
-            # Detect "DONE" affirmative signal
+            # 2. Extract custom folder name if user specified (e.g., "folder: My_Scenes" or "folder My_Scenes")
+            if not cloud_link:
+                folder_match = re.search(r"(?:folder|dir|path)[:\s]+([A-Za-z0-9_\-]+)", body, re.IGNORECASE)
+                if folder_match:
+                    cloud_link = folder_match.group(1).strip()
+                    logger.info(f"[imap_listener] Extracted custom folder name from email: '{cloud_link}'")
+
+            # 3. Detect "DONE" affirmative signal
             is_done = bool(re.search(r"\b(done|ready|finished|uploaded|proceed)\b", body, re.IGNORECASE))
 
             results.append({

@@ -10,6 +10,7 @@ import base64
 import json
 import logging
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -271,8 +272,46 @@ class DriveManager:
 
         return sorted(downloaded_clips)
 
-    def _extract_folder_id(self, url_or_id: str) -> str:
-        """Extracts Google Drive folder ID from a full sharing URL or returns raw ID."""
-        if "folders/" in url_or_id:
-            return url_or_id.split("folders/")[1].split("?")[0].strip("/")
-        return url_or_id.strip()
+    def _extract_folder_id(self, url_or_query: str) -> str:
+        """
+        Resolves a Google Drive folder ID from:
+          1. Full sharing URL (https://drive.google.com/drive/folders/<id>)
+          2. Direct 25-45 char folder ID
+          3. Folder NAME inside master_folder_id (e.g. user replies with "Heracleion_Scenes")
+        """
+        cleaned = url_or_query.strip()
+        if "folders/" in cleaned:
+            return cleaned.split("folders/")[1].split("?")[0].strip("/")
+
+        # If it looks like a valid raw Google Drive ID (alphanumeric, no spaces, length >= 25)
+        if re.match(r"^[A-Za-z0-9_-]{25,50}$", cleaned) and not cleaned.startswith("202"):
+            return cleaned
+
+        # Otherwise treat as folder name inside master_folder_id
+        if self.is_cloud_enabled() and self.master_folder_id:
+            try:
+                # 1. Try exact name match
+                q = f"'{self.master_folder_id}' in parents and name = '{cleaned}' and mimeType = 'application/vnd.google-apps.folder' and trashed = false"
+                url = f"https://www.googleapis.com/drive/v3/files?q={requests.utils.quote(q)}&fields=files(id,name)"
+                resp = requests.get(url, headers=self._headers(), timeout=15)
+                if resp.status_code == 200:
+                    files = resp.json().get("files", [])
+                    if files:
+                        found_id = files[0]["id"]
+                        logger.info(f"[drive_manager] Resolved folder name '{cleaned}' to Google Drive ID: {found_id}")
+                        return found_id
+
+                # 2. Try partial name match (e.g. run name prefix)
+                q_partial = f"'{self.master_folder_id}' in parents and name contains '{cleaned[:20]}' and mimeType = 'application/vnd.google-apps.folder' and trashed = false"
+                url = f"https://www.googleapis.com/drive/v3/files?q={requests.utils.quote(q_partial)}&fields=files(id,name)"
+                resp = requests.get(url, headers=self._headers(), timeout=15)
+                if resp.status_code == 200:
+                    files = resp.json().get("files", [])
+                    if files:
+                        found_id = files[0]["id"]
+                        logger.info(f"[drive_manager] Resolved partial folder match '{files[0]['name']}' to ID: {found_id}")
+                        return found_id
+            except Exception as e:
+                logger.warning(f"[drive_manager] Could not resolve folder name '{cleaned}' via Drive API: {e}")
+
+        return cleaned
