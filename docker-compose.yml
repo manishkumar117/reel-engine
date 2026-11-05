@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  reel-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: reel_engine_production
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Persist compiled runs and audio assets on host machine
+      - ./runs:/app/reel_engine/runs
+      - ./audio:/app/reel_engine/audio
+    environment:
+      - PYTHONUNBUFFERED=1

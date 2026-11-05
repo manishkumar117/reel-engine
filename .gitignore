@@ -1,0 +1,74 @@
+# ── Credentials & Secrets ──────────────────────────────────────
+.env
+*.env
+*.env.*
+.env.local
+service_account.json
+client_secret.json
+token.json
+
+# ── Python Runtime & Environments ──────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Local Production Runs & Heavy Media (Persisted to Cloud) ──
+reel_engine/runs/*
+!reel_engine/runs/.gitkeep
+runs/*
+!runs/.gitkeep
+
+# ── Media File Extensions ──────────────────────────────────────
+*.mp4
+*.m4v
+*.wav
+*.mp3
+*.ass
+*.png
+*.jpg
+*.jpeg
+
+# ── Databases & Logs ───────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+*.log
+trend_engine/signal_pool.db
+trend_engine/trend_engine.log
+trend_engine/findings/
+trend_engine/history.json
+
+# ── OS & IDE Artifacts ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
